@@ -1,0 +1,130 @@
+/* Reset CSS per assicurarsi che il layout di base sia coerente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stile del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenitore principale */
+.container {
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/* Titolo */
+.title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Lista delle cose da fare */
+.todolist {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+/* Contenitore per la lista */
+.todolistdiv {
+    width: 100%;
+}
+
+/* Lista non ordinata */
+#listitems {
+    list-style: none;
+    padding: 0;
+}
+
+/* Elemento della lista */
+#listitems li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/* Checkbox */
+#listitems li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Testo dell'elemento della lista */
+#listitems li label {
+    flex: 1; /* Fai espandere il testo per occupare lo spazio rimanente */
+    padding-right: 10px;
+    display: flex; /* Imposta il testo come elemento "flex" */
+    flex-wrap: wrap; /* Fai andare a capo il testo se è troppo lungo */
+}
+
+/* Input e bottone */
+.inputdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.task p {
+    overflow: hidden;
+}
+
+/* Media query per schermi più piccoli */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Ridotto il padding su schermi più piccoli */
+        overflow: hidden;
+        word-wrap: break-word;
+    }
+
+    .inputdiv {
+        flex-direction: row; /* Tornato alla disposizione orizzontale su schermi più piccoli */
+    }
+    .task p {
+        overflow: hidden;
+    }
+
+}
